@@ -34,7 +34,7 @@ No local installation is required for training. The notebook runs entirely on Ka
  
 - Create a free account at [kaggle.com](https://www.kaggle.com)
 - Navigate to **Code → New Notebook**
-- Upload `notebooks/pcb_classifier_training.ipynb` or import it directly from this repository
+- Upload `notebooks/Vision.py` or import it directly from this repository
 - In the notebook settings, enable **GPU accelerator** (P100 or T4)
 - Upload your dataset or attach the relevant Kaggle datasets via **Add Data**
 - Run all cells top to bottom

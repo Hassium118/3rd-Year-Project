@@ -26,7 +26,7 @@ All images are resized to 96×96 pixels during preprocessing. This input size wa
  
 ---
  
-## Installation — Training Environment (Kaggle)
+## Installation - Training Environment (Kaggle)
  
 No local installation is required for training. The notebook runs entirely on Kaggle's server GPU environment.
  

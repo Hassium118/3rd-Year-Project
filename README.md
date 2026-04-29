@@ -170,7 +170,12 @@ while True:
 Prediction: PCB | Confidence: 0.94 | FPS: 8.3
 Prediction: not-PCB | Confidence: 0.87 | FPS: 8.1
 ```
- 
+ ## Conclusion  & Future Works
+ This study investigates the feasibility of deploying quantized convolutional neural networks on the OpenMV Cam H7 in the context of sorting WEEE. The central finding is that deployment on the embedded device is not only a theoretical application, but is empirically achievable with high accuracies. Of all the models evaluated, MobileNetV2 with alpha = 0.35 resulted in the top performing architecture and variant, achieving a post-quantization accuracy of 92.88%, only occupying 959.6KB of memory. In addition, MobileNetV1 at alpha = 0.25 also deployed successfully, achieving 90.03\% accuracy with almost half the memory usage. The final verdict was that since both models are able to be deployed on the embedded device, the marginal accuracy gain of roughly 2% is worth the extra memory footprint. 
+
+Architectures like EfficientNet-B0 model could not be deployed due to its model size exceeding the tensor arena constraint, making this a key contribution to the study. The results displayed in this paper prove the viability of applying deep learning architectures on the edge, without the need for cloud connectivity.
+
+The classifier model developed in this study outputs a binary decision, PCB or not-PCB. However it does not provide any spatial information regarding where in the frame the object of interest is located. The sorting algorithm in this study assumes the PCB waste presented on the conveyor belts are pre-processed and are uniformly aligned in a known location. This presents potential issues where mistakes in this section of the sorting pipeline has direct negative consequences to the output. For the seamless integration of robotic arms or deflectors, spatial coordinates are essential. The natural next step is to investigate concepts like object detection, using lightweight edge frameworks like FOMO (Faster Objects, More Objects).
 ---
  
 ## References
